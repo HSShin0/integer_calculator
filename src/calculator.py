@@ -5,13 +5,12 @@
 - Contact: hsshin@jmarple.ai
 """
 
-from abc import ABC, abstractmethod
+from abc import ABC
 
 
 class Calculator(ABC):
     """An abstract class of basic computations."""
 
-    @abstractmethod
     def operate(self: "Calculator", left: int, right: int) -> int:
         """Operate the defined calcuation with two given operands."""
         raise NotImplementedError
@@ -22,7 +21,7 @@ class Adder(Calculator):
 
     def operate(self: "Adder", left: int, right: int) -> int:
         """Add two integers."""
-        raise NotImplementedError
+        return left + right
 
 
 class Subtractor(Calculator):
@@ -30,7 +29,7 @@ class Subtractor(Calculator):
 
     def operate(self: "Subtractor", left: int, right: int) -> int:
         """Subtract two integers."""
-        raise NotImplementedError
+        return left - right
 
 
 class Multiplier(Calculator):
@@ -38,7 +37,7 @@ class Multiplier(Calculator):
 
     def operate(self: "Multiplier", left: int, right: int) -> int:
         """Multiply two integers."""
-        raise NotImplementedError
+        return left * right
 
 
 class Divider(Calculator):
@@ -46,4 +45,4 @@ class Divider(Calculator):
 
     def operate(self: "Divider", left: int, right: int) -> int:
         """Divide two integers."""
-        raise NotImplementedError
+        return left // right
