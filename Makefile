@@ -3,9 +3,7 @@ format:
 		isort .
 
 test:
-		flake8 .
-		mypy .
-		pylint *.py
+		pytest --pylint --mypy --flake8
 
 install:
 		conda env create --file ./environment.yml
