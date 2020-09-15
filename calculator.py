@@ -12,47 +12,38 @@ class Calculator(ABC):
     """An abstract class of basic computations."""
 
     @abstractmethod
-    def operate(self: "Calculator", x: int, y: int) -> int:
-        """Operate the defined calcuation with two given operands.
-
-        Args:
-            x (int): left operand.
-            y (int): right operand.
-
-        Returns:
-            int: Calcalated result.
-
-        """
-        pass
+    def operate(self: "Calculator", left: int, right: int) -> int:
+        """Operate the defined calcuation with two given operands."""
+        raise NotImplementedError
 
 
 class Adder(Calculator):
     """Addition."""
 
-    def operate(self: "Adder", x: int, y: int) -> int:
+    def operate(self: "Adder", left: int, right: int) -> int:
         """Add two integers."""
-        pass
+        raise NotImplementedError
 
 
 class Subtractor(Calculator):
     """Subtraction."""
 
-    def operate(self: "Subtractor", x: int, y: int) -> int:
+    def operate(self: "Subtractor", left: int, right: int) -> int:
         """Subtract two integers."""
-        pass
+        raise NotImplementedError
 
 
 class Multiplier(Calculator):
     """Muliplication."""
 
-    def operate(self: "Multiplier", x: int, y: int) -> int:
+    def operate(self: "Multiplier", left: int, right: int) -> int:
         """Multiply two integers."""
-        pass
+        raise NotImplementedError
 
 
 class Divider(Calculator):
     """Division."""
 
-    def operate(self: "Divider", x: int, y: int) -> int:
+    def operate(self: "Divider", left: int, right: int) -> int:
         """Divide two integers."""
-        pass
+        raise NotImplementedError
