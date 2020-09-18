@@ -23,9 +23,10 @@ class TestAdder:
     def test_neg(self):
         assert Adder().operate(-1, 2) == 1
 
-    def test_dummy(self):
-        """A dummy test for varifying pre-push hook."""
-        assert Adder().operate(11, 13) == 0
+
+#    def test_dummy(self):
+#        """A dummy test for varifying pre-push hook."""
+#        assert Adder().operate(11, 13) == 0
 
 
 class TestSubtractor:
