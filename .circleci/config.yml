@@ -1,0 +1,15 @@
+version: 2.1
+
+jobs:
+  test:
+    docker:
+      - image: hyungseok/integer_calculator
+    steps:
+      - checkout
+      - run: make docker-push
+      - run: make test
+
+workflows:
+  main:
+    jobs:
+      - test
