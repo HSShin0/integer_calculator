@@ -6,7 +6,8 @@ jobs:
       - image: hyungseok/integer_calculator
     steps:
       - checkout
-      - run: make docker-push
+      - run: make format
+      - run: make lint
       - run: make test
 
 workflows:
