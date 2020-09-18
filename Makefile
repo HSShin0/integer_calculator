@@ -10,3 +10,7 @@ test:
 
 install:
 		conda env create --file ./environment.yml
+
+docker-push:
+		docker build --tag hyungseok/integer_calculator .
+		docker push hyungseok/integer_calculator
